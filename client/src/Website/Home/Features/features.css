@@ -10,7 +10,7 @@
     height: 16px;
     background-image: url(../../assets/ripped-paper-white-up.png);
     position: absolute;
-    top: -16px;
+    top: -14px;
     left: 0;
     z-index: 10;
     transform: rotate(180deg);
@@ -115,3 +115,61 @@
     transition: all 3s ease-in-out; /* Example transition effect */
   }
   
+
+  /* Responsive styles */
+
+/* For tablets (max-width: 991px) */
+@media (max-width: 991px) {
+    .card-column {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .card-column .card1,
+    .card-column .card {
+        padding: 40px 20px;
+    }
+
+    .col-md-3 {
+        width: 50%; /* Adjust column width for tablets */
+    }
+
+    .card-column .card1 h3,
+    .card-column .card h3 {
+        font-size: 20px;
+    }
+
+    .card-column .card1 p,
+    .card-column .card p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* For mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .card-column {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .col-md-3 {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .card-column .card1,
+    .card-column .card {
+        padding: 60px 24px;
+    }
+
+    .card-column .card1 h3,
+    .card-column .card h3 {
+        font-size: 18px;
+    }
+
+    .card-column .card1 p,
+    .card-column .card p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

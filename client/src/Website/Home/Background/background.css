@@ -39,3 +39,52 @@
 .background.fade-in {
     animation: fadeIn 500ms ease-in-out;
 }
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .background {
+        height: 100vh; /* Maintain full height on tablet */
+        object-position: center; /* Ensure image is centered */
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .background {
+        height: 100vh;
+        object-position: center center; /* Better centering for mobile */
+    }
+    
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better mobile readability */
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .background {
+        height: 100vh;
+        object-position:  85% center;
+        object-fit: cover;
+    }
+    
+    /* Adjust fade-in animation timing for better performance on mobile */
+    .background.fade-in {
+        animation: fadeIn 300ms ease-in-out;
+    }
+}
+
+/* Handle landscape orientation on mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .background {
+        min-height: 100vh; /* Ensure full coverage in landscape */
+    }
+}
+
+/* Handle very tall screens */
+@media screen and (min-height: 1000px) {
+    .background {
+        height: 100vh;
+        object-position: center top; /* Better positioning for tall screens */
+    }
+}

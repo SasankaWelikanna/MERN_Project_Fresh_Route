@@ -145,7 +145,6 @@
 .nav-menu .nav-list .cart-badge {
     margin-right: 20px; /* Adjust spacing */
     position: relative;
-    background-color: black;
 }
 
 .cart-badge .MuiBadge-badge {
@@ -235,6 +234,153 @@
     color: #ffffff;
 }
 
+
+/* Existing styles remain the same */
+
+/* Mobile Navigation Styles */
+.nav-toggle {
+    display: none; /* Hidden by default on desktop */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.stricky-header .nav-toggle span {
+    background-color: #000000;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .nav {
+        margin: 0 20px;
+        padding: 10px 0;
+    }
+
+    .nav-toggle {
+        display: block; /* Show hamburger on mobile */
+
+    }
+    .nav .nav-logo a{
+        font-size: 30px;
+    }
+       
+    .nav .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hide off canvas */
+        width: 75%; /* Take up 75% of screen width */
+        height: 100vh;
+        align-items: start;
+
+        background-color: #ffffff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 40px;
+        transition: right 0.3s ease;
+        gap: 30px;
+        z-index: 999;
+    }
+
+    /* When menu is active */
+    .nav .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu .nav-list a {
+        color: #000000;
+        font-size: 60px;
+        /* font-weight: 700; */
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-list a:hover {
+        border-bottom: none;
+        color: var(--hoverColor);
+    }
+
+    .nav-menu .nav-list .user-menu{
+        display: none;
+    }
+    /* Hamburger animation when active */
+   
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background-color: #000000;
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+        background-color: #000000;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+        background-color: #000000;
+    }
+
+    /* Overlay when menu is open */
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 990;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
+
+    /* Adjust other mobile-specific styles */
+    .nav-login {
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .shopping-cart-icon {
+        color: #000000;
+        display: none;
+
+    }
+
+    /* Sticky header mobile adjustments */
+    .stricky-header .nav-menu {
+        background-color: #000000;
+    }
+
+    .stricky-header .nav-menu .nav-list a {
+        color: #000000;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .nav {
+        margin: 0 15px;
+    }
+
+    .nav .nav-menu {
+        width: 90%; /* Wider menu for smaller screens */
+        padding: 70px 30px;
+    }
+
+    .nav-menu .nav-list a {
+        font-size: 34px;
+    }
+}
 
   /* ================================custom-header ends================================ */
   

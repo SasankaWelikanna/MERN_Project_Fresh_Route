@@ -17,6 +17,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [initialScroll, setInitialScroll] = useState(true);
   const [totalAmount, setTotalAmount] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -48,16 +49,29 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [initialScroll]);
 
+  // Handle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = isMobileMenuOpen ? 'auto' : 'hidden';
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    document.body.style.overflow = 'auto';
+  };
+
   const handleLogIn = () => {
     navigate("/login");
+    closeMobileMenu();
   };
 
   const handleLogout = () => {
     localStorage.clear();
+    closeMobileMenu();
     window.location.reload();
   };
 
-  // Check if user is logged in based on the token stored in localStorage
   const isUserLoggedIn = localStorage.getItem("token");
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -79,22 +93,40 @@ const Navbar = () => {
         <div className="nav-logo">
           <a href="/">FreshRoute.</a>
         </div>
-        <ul className="nav-menu">
+
+        {/* Mobile Menu Toggle Button */}
+        <div 
+          className={`nav-toggle ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={toggleMobileMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Overlay */}
+        <div 
+          className={`nav-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={closeMobileMenu}
+        ></div>
+
+        {/* Navigation Menu */}
+        <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <li className="nav-list">
-            <a href="/">Home</a>
+            <a href="/" onClick={closeMobileMenu}>Home</a>
           </li>
           <li className="nav-list">
-            <a href="/about">About</a>
+            <a href="/about" onClick={closeMobileMenu}>About</a>
           </li>
           <li className="nav-list">
-            <a href="/shop">Shop</a>
+            <a href="/shop" onClick={closeMobileMenu}>Shop</a>
           </li>
           <li className="nav-list">
-            <a href="/contact">Contact</a>
+            <a href="/contact" onClick={closeMobileMenu}>Contact</a>
           </li>
-          <li className="">
+          <li className="nav-list">
             {isUserLoggedIn ? (
-              <div>
+              <div className="user-menu">
                 <Link to="" className="me-2">
                   <Button
                     id="basic-button"
@@ -117,20 +149,20 @@ const Navbar = () => {
                       "aria-labelledby": "basic-button",
                     }}
                   >
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>My Dashboard</MenuItem>
+                    <MenuItem onClick={() => { handleClose(); closeMobileMenu(); }}>Profile</MenuItem>
+                    <MenuItem onClick={() => { handleClose(); closeMobileMenu(); }}>My Dashboard</MenuItem>
                     <MenuItem onClick={handleLogout}>Logout</MenuItem>
                   </Menu>
                 </Link>
-                <Link to="/cart">
-                  <Badge className="cart-badge"
+                <Link to="/cart" onClick={closeMobileMenu}>
+                  <Badge 
+                    className="cart-badge"
                     badgeContent={cartState?.length ? cartState?.length : 0}
                     color="primary"
                   >
-                  <i className="fa fa-shopping-cart shopping-cart-icon"></i>
+                    <i className="fa fa-shopping-cart shopping-cart-icon"></i>
                   </Badge>
                 </Link>
-                {/* <button onClick={handleLogout} className='nav-login'>Logout</button> */}
               </div>
             ) : (
               <button onClick={handleLogIn} className="nav-login">
