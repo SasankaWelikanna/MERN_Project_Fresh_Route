@@ -12,7 +12,7 @@
     height: 16px;
     background-image: url(../../assets/ripped-paper-white-up.png);
     position: absolute;
-    top: -0;
+    top: -1px;
     left: 0;
     z-index: 17;
     /* transform: rotate(180deg); */
@@ -81,4 +81,170 @@
     width: 70px; /* Adjust width as needed */
     height: 70px; /* Adjust height as needed */
     background-color: rgb(171, 171, 171);
+}
+
+
+/* General adjustments for tablets and smaller screens */
+@media screen and (max-width: 1150px) {
+  .offersection {
+    height: 70vh; /* Reduce height for tablets */
+    background-color: white;
+
+  }
+
+  .offersection img {
+    height: 70vh; /* Match height with the section */
+  }
+
+  .offerCol {
+    padding: 30px; /* Reduce padding */
+  }
+
+  .white-rectangle {
+    padding-top: 50px;
+    position: relative; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Adjust position to center the rectangle */
+    width: 100%; 
+    height: 145%;
+    background-color: white;
+    box-shadow: -1px 2px 25px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;  
+}
+
+  .heading {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .subheading {
+    font-size: 28px; /* Reduce font size */
+  }
+
+  ._text {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  ._textCount {
+    font-size: 22px; /* Adjust font size */
+  }
+
+  .black-rectangle {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 850px) {
+  .offersection {
+    height: 87vh; /* Further reduce height for mobile */
+  }
+
+  .offersection img {
+    height: 60vh; /* Match height with section */
+  }
+
+  .offerCol {
+    padding: 20px; /* Further reduce padding */
+  }
+
+
+  .heading {
+    font-size: 12px; /* Reduce font size */
+  }
+
+  .subheading {
+    font-size: 24px; /* Further reduce font size */
+  }
+
+  ._text {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  ._textCount {
+    font-size: 20px; /* Adjust font size */
+  }
+
+  .black-rectangle {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Small Mobile (max-width: 450px) */
+@media screen and (max-width: 450px) {
+  .offersection {
+    height: 83vh; /* Minimized height for small screens */
+  }
+
+  .offersection img {
+    height: 50vh; /* Match height */
+  }
+
+  .offerCol {
+    padding: 10px; /* Reduce padding further */
+  }
+
+
+
+  .heading {
+    font-size: 12px; /* Small font size */
+  }
+
+  .subheading {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  ._text {
+    font-size: 10px; /* Smaller font size */
+  }
+
+  ._textCount {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .black-rectangle {
+    width: 40px;
+    height: 40px; /* Smaller rectangle */
+  }
+}
+
+/* Very small screens or older devices (max-width: 320px) */
+@media screen and (max-width: 320px) {
+  .offersection {
+    height: 75vh;
+    background-color: white;
+
+  }
+
+  .offersection img {
+    height: 45vh;
+  }
+
+  .offerCol {
+    padding: 5px;
+  }
+
+
+  .heading {
+    font-size: 7px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  ._text {
+    font-size: 9px;
+  }
+
+  ._textCount {
+    font-size: 16px;
+  }
+
+  .black-rectangle {
+    width: 30px;
+    height: 30px;
+  }
 }

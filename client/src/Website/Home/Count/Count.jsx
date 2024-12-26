@@ -75,7 +75,7 @@ const Count = () => {
                     <span> Hours</span>
                   </div>
                   <div>
-                    <span> Minutes</span>
+                    <span> Min</span>
                   </div>
                   <div>
                     <span>Sec</span>
