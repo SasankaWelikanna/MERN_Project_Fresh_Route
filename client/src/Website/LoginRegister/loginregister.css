@@ -276,8 +276,7 @@ span a:hover{
     }
     img{
         width: 35px;
-        position: relative;
-        
+        position: relative;    
     }
     .text{
         position: absolute;
