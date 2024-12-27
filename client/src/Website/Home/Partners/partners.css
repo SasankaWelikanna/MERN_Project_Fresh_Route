@@ -63,4 +63,186 @@
 }
 
 
+@media (min-width: 769px) {
+    .logo-col .row img {
+      margin-right: 40px;
+    }
+    .logo-col img {
+      width: 200px;
+    }
+  }
 
+
+/* General adjustments for tablets and smaller screens */
+@media screen and (max-width: 1150px) {
+    .section_partners {
+      padding: 3rem 5rem; /* Adjust padding for smaller screens */
+      padding-bottom: 4rem;
+    }
+  
+    .logo-col img {
+      width: 160px; /* Scale down logo images */
+    }
+  
+    .logo-col .img1 {
+      height: 70px; /* Adjust height */
+    }
+  
+    .logo-col .img2 {
+      margin-top: 15px;
+      width: 200px;
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .logo-col .img3 {
+      width: 100px;
+      height: 80px;
+    }
+  
+    .logo-col .img4 {
+      width: 140px;
+      height: 90px;
+    }
+  
+    .logo-col .img5 {
+      width: 150px;
+      height: 70px;
+    }
+  
+    .logo-col .row img {
+      margin-right: 30px; /* Reduce spacing between images */
+    }
+  }
+  
+  /* Mobile-specific adjustments */
+  @media screen and (max-width: 850px) {
+    .section_partners {
+      padding: 2rem 3rem;
+      padding-bottom: 3rem;
+    }
+  
+    .logo-col img {
+      width: 140px;
+    }
+  
+    .logo-col .img1 {
+      height: 60px;
+    }
+  
+    .logo-col .img2 {
+      margin-top: 10px;
+      width: 180px;
+    }
+  
+    .logo-col .img3 {
+      width: 90px;
+      height: 70px;
+    }
+  
+    .logo-col .img4 {
+      width: 120px;
+      height: 80px;
+    }
+  
+    .logo-col .img5 {
+      width: 130px;
+      height: 60px;
+    }
+  
+    .logo-col .row img {
+      margin-right: 20px; /* Reduce spacing further */
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+
+    .logo-col .row img {
+        margin-right: 40px;
+      }
+ 
+
+    .swiper-slide img {
+      width: 130px;
+      height: auto;
+      margin: auto;
+    }
+  }
+  /* Small Mobile (max-width: 450px) */
+  @media screen and (max-width: 450px) {
+    .section_partners {
+      padding: 1.5rem 2rem;
+      padding-bottom: 2rem;
+    }
+  
+    .logo-col img {
+      width: 120px;
+    }
+  
+    .logo-col .img1 {
+      height: 50px;
+    }
+  
+    .logo-col .img2 {
+      margin-top: 5px;
+      width: 150px;
+    }
+  
+    .logo-col .img3 {
+      width: 80px;
+      height: 60px;
+    }
+  
+    .logo-col .img4 {
+      width: 100px;
+      height: 70px;
+    }
+  
+    .logo-col .img5 {
+      width: 110px;
+      height: 50px;
+    }
+  
+    .logo-col .row img {
+      margin-right: 15px; /* Reduce spacing further */
+    }
+  }
+  
+  /* Very small screens or older devices (max-width: 320px) */
+  @media screen and (max-width: 320px) {
+    .section_partners {
+      padding: 1rem 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  
+    .logo-col img {
+      width: 100px;
+    }
+  
+    .logo-col .img1 {
+      height: 40px;
+    }
+  
+    .logo-col .img2 {
+      width: 130px;
+    }
+  
+    .logo-col .img3 {
+      width: 70px;
+      height: 50px;
+    }
+  
+    .logo-col .img4 {
+      width: 90px;
+      height: 60px;
+    }
+  
+    .logo-col .img5 {
+      width: 90px;
+      height: 40px;
+    }
+  
+    .logo-col .row img {
+      margin-right: 10px; /* Minimal spacing for very small screens */
+    }
+  }
