@@ -41,3 +41,34 @@ position: relative;
     border-radius: 10px;
 
 } 
+
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .left-column .img1 {
+      top: 0rem;
+      right: -2rem;
+      width: 69%; /* Adjust size for smaller screens */
+    }
+  
+    .left-column .img2 {
+      width: 62%;
+      height: auto; /* Maintain aspect ratio */
+      top: 8rem;
+      right: 2rem;
+    }
+  
+    .left-column .img3 {
+      width: 90%;
+      top: 7rem;
+      left: 0; /* Center align */
+    }
+  
+    .left-column .img4 {
+      width: 45%;
+      height: auto; /* Maintain aspect ratio */
+      top: 3rem;
+      right: 1rem; /* Align closer for smaller screens */
+    }
+  }

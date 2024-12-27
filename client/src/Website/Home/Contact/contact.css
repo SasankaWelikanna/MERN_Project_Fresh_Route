@@ -1,7 +1,7 @@
 .contact-section{
     position: relative;
     background-color:  #f6f5f2;
-    margin-bottom: -14rem;
+    margin-bottom: -5rem;
 
 }
 
@@ -42,3 +42,46 @@
     transition: 0.48s ease;
   }
   
+
+  /* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .contact-section {
+        margin-top: 5rem;
+      margin-bottom: 0rem; /* Adjust for smaller screens */
+    }
+  
+    .join-image {
+        display: none;
+
+      width: 90%; /* 
+      Reduce width for mobile screens */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: -10rem; /* Adjust margin for better positioning */
+    }
+  
+    .home-button {
+      font-size: 12px; /* Smaller font size for mobile */
+      padding: 0.5rem 1.5rem; /* Adjust padding for smaller screens */
+      line-height: 24px; /* Slightly reduce line height */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-section {
+
+     margin-top: 5rem;
+      margin-bottom: 0rem; /* Further reduce margin for very small screens */
+    }
+  
+    .join-image {
+        display: none;
+      width: 100%; /* Full width for smaller mobile devices */
+      margin-top: -8rem; /* Adjust margin */
+    }
+  
+    .home-button {
+      font-size: 10px; /* Smaller font size for very small screens */
+      padding: 0.4rem 1rem; /* Adjust padding further */
+      line-height: 22px; /* Reduce line height */
+    }
+  }

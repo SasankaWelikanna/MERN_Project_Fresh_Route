@@ -167,6 +167,10 @@
       height: auto;
       margin: auto;
     }
+
+    .swiper-slide img.img2 {
+        margin-right: 100px; /* Custom margin specifically for img2 */
+      }
   }
   /* Small Mobile (max-width: 450px) */
   @media screen and (max-width: 450px) {

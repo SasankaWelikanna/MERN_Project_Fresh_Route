@@ -52,7 +52,7 @@ const Partners = () => {
                   <img src={img1} alt="Keells Logo" className="img1" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={img2} alt="Glomark Logo" className="img2" />
+                  <img src={img5} alt="Arpico Logo" className="img5" />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img src={img3} alt="MD Logo" className="img3" />
@@ -61,7 +61,7 @@ const Partners = () => {
                   <img src={img4} alt="Food City Logo" className="img4" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={img5} alt="Arpico Logo" className="img5" />
+                  <img src={img2} alt="Glomark Logo" className="img2" />
                 </SwiperSlide>
               </Swiper>
             ) : (
