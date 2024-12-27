@@ -158,6 +158,11 @@
    color: #fff;
 }
 
+@media (max-width: 768px){
+    .bottom-footer p{
+       font-size: 12px;
+    }
+}
 /* .bottom-footer::before{
     content: "";
     width: 100%;
