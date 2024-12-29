@@ -329,3 +329,142 @@ span a:hover{
     }
 }
 
+/* Responsive design for mobile, tablet, and desktop */
+@media only screen and (max-width: 480px) { /* Mobile */
+    .side-video {
+        flex-basis: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        display: none;
+
+    }
+    .login-row {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        padding: 10px;
+        flex-direction: column;
+    }
+    .input-box {
+        width: 100%;
+    }
+    .input-box h4 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .submit {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .sign-in-options {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .signin a {
+        margin-right: 10px;
+    }
+    .footerDiv {
+        height: auto;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+    .footerDiv .btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .login-img {
+        width: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .textDiv p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) { /* Tablets */
+    .login-row {
+        width: 95%;
+        height: auto;
+    }
+    .side-video {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        display: none;
+
+    }
+    .input-box {
+        width: 80%;
+    }
+    .submit {
+        width: 80%;
+    }
+    .sign-in-options {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .signin a {
+        width: 160px;
+        margin-right: 5px;
+    }
+    .footerDiv {
+        height: auto;
+        padding: 1rem;
+        justify-content: center;
+    }
+    .footerDiv .btn {
+        padding: 0.4rem 1rem;
+    }
+    .login-img {
+        width: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .title {
+        font-size: 30px;
+    }
+    .textDiv p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 769px) { /* Desktops and larger screens */
+    .side-video {
+        flex-basis: 50%;
+        width: 70%;
+        border-radius: 10px 0 0 10px;
+        }
+    .login-row {
+        width: 900px;
+        height: 550px;
+    }
+    .input-box {
+        width: 330px;
+    }
+    .submit {
+        width: 330px;
+    }
+    .footerDiv {
+        height: 60px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footerDiv .btn {
+        padding: 0.5rem 1.2rem;
+    }
+    .login-img {
+        width: 80px;
+        left: 11rem;
+    }
+    .title {
+        font-size: 35px;
+    }
+    .textDiv p {
+        font-size: 18px;
+    }
+}

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import "./loginregister.css";
 import { Link, Navigate, redirect, useNavigate } from "react-router-dom";
 
 import video from "../../assests/video.mp4";

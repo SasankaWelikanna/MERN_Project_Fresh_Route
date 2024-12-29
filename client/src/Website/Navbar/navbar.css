@@ -345,15 +345,18 @@
 
     /* Adjust other mobile-specific styles */
     .nav-login {
-        width: 100%;
+        width: 108%;
         text-align: center;
-        display: none;
-    }
+        color: #fff;
+        background-color: #76b81f;  
+        border-radius: 60px;
+        padding: 12px 124px;
+      }
 
     .shopping-cart-icon {
         color: #000000;
         display: none;
-
+       
     }
 
     /* Sticky header mobile adjustments */
